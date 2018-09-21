@@ -1,6 +1,4 @@
 import EventEmitter from 'tiny-emitter';
-import $ from 'jquery';
-import filterBrowserSyncUrl from 'utils/browsersync/filter-url';
 
 export default class SPAManager extends EventEmitter{
   constructor (settings = {}){
