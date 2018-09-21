@@ -1,0 +1,22 @@
+{
+  "name": "spa-manager",
+  "version": "0.0.1",
+  "description": "Single Page Application manager",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manuelodelain/spa-manager.git"
+  },
+  "author": "Manuel Odelain",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/manuelodelain/spa-manager/issues"
+  },
+  "homepage": "https://github.com/manuelodelain/spa-manager#readme",
+  "dependencies": {
+    "tiny-emitter": "^2.0.2"
+  }
+}

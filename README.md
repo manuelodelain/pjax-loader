@@ -1,1 +1,1 @@
-# spa-loader
+# spa-manager
