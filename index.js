@@ -8,7 +8,7 @@ export default class SPAManager extends EventEmitter{
 
     this.initialized = false;
 
-    // Does the History API available ?
+    // Does the History API is available ?
     if (!window.history) return;
 
     // default settings
