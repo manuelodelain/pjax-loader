@@ -40,7 +40,7 @@ export default class SPAManager extends EventEmitter{
     window.addEventListener('popstate', this.onPopState.bind(this));
 
     if (this.listenLinks) {
-      document.addEventListener('click', event => {
+      document.addEventListener(this.clickEvent, event => {
         if (event.currentTarget.tagName.toLowerCase() !== 'a') return;
 
         this.onLinkClick(event);
