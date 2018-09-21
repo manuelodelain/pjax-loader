@@ -8,11 +8,15 @@ export default class SPAManager extends EventEmitter{
 
     this.initialized = false;
 
+    // Does the History API available ?
     if (!window.history) return;
 
     // default settings
     this.listenLinks = true;
+    this.linksSelector = 'a';
+    this.clickEvent = document.ontouchstart ? 'touchstart' : 'click';
 
+    // override default settings if needed
     for (let key in settings) {
       if (typeof this[key] !== 'undefined') this[key] = settings[key];
     }
@@ -33,10 +37,14 @@ export default class SPAManager extends EventEmitter{
       isFirstState: true
     }, '', window.location.href);
 
-    window.onpopstate = this.onPopState.bind(this);
+    window.addEventListener('popstate', this.onPopState.bind(this));
 
     if (this.listenLinks) {
-      document.addEventListener('click', this.onLinkClick.bind(this));
+      document.addEventListener('click', event => {
+        if (event.currentTarget.tagName.toLowerCase() !== 'a') return;
+
+        this.onLinkClick(event);
+      });
     }
   }
 
@@ -48,7 +56,7 @@ export default class SPAManager extends EventEmitter{
 
     this.emit('loading', url);
 
-    this.loadPage(url);
+    return this.loadPage(url);
   }
 
   loadPage (url) {
