@@ -1,6 +1,6 @@
 import EventEmitter from 'tiny-emitter';
 
-export default class SPAManager extends EventEmitter{
+export default class PjaxLoader extends EventEmitter{
   constructor (settings = {}){
     super();
 
