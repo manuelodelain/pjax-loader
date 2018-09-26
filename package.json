@@ -1,21 +1,21 @@
 {
-  "name": "spa-manager",
+  "name": "pjax-loader",
   "version": "0.0.1",
-  "description": "Single Page Application manager",
+  "description": "Load pages with ajax + History API",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/manuelodelain/spa-manager.git"
+    "url": "git+https://github.com/manuelodelain/pjax-loader.git"
   },
   "author": "Manuel Odelain",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/manuelodelain/spa-manager/issues"
+    "url": "https://github.com/manuelodelain/pjax-loader/issues"
   },
-  "homepage": "https://github.com/manuelodelain/spa-manager#readme",
+  "homepage": "https://github.com/manuelodelain/pjax-loader#readme",
   "dependencies": {
     "tiny-emitter": "^2.0.2"
   }
