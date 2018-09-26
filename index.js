@@ -73,8 +73,10 @@ export default class SPAManager extends EventEmitter{
   }
 
   replaceState (state, url, merge = false){
-    if (merge){
-      state = Object.assign({}, window.history.state, state);
+    if (merge && window.history.state){
+      for (let key in state) {
+        if (typeof window.history.state[key] !== 'undefined') window.history.state[key] = state[key];
+      }
     }
 
     window.history.replaceState(state, '', url);
